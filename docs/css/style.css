@@ -1,0 +1,76 @@
+/*Estilos de cabecera*/
+
+div.title-block {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #3c3d3c;
+}
+
+#title {
+    font-size: 300%;
+    text-decoration: none;
+    color: #efeff7;
+    font-family: sans-serif;
+    margin-bottom: 0;
+}
+
+#subtitle {
+    font-size: 120%;
+    font-style: italic;
+    color: #e8e7f3;
+    font-family: monospace;
+}
+
+div.navigation>a {
+    color: rgb(245, 239, 239);
+    font-size: 120%;
+    background-color: #111010;
+    font-family: monospace;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 150px;
+}
+
+
+/*Estilos de foto e imagenes*/
+
+div.class-photo-block {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5%;
+}
+
+h2.class-photo-title {
+    font-size: 140%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+h3.class-photo-score {
+    font-size: 130%;
+    font-family: monospace;
+}
+
+img.class-photo-image {
+    width: 100%;
+    height: auto;
+}
+
+.class-gallery-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+
+/*Estilos de formularios*/
+
+.input-group>label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+.input-group {
+    margin-bottom: 0.5em;
+}

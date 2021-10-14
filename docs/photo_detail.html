@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<!--
+    https://validator.w3.org
+-->
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="/js/utils/include.js"></script>
+
+    <script src="docs/js/photo_detail.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
+    <script src= "js/header.js" type= "module"></script>
+
+    <title>Photo view</title>
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+    <div id="errors"></div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md">
+                <div class="col-md" id="photo-details-column">
+
+                </div>
+            </div>
+        </div>
+        <div class = "row text-center" id="show-categories"></div>
+        <hr>
+        
+        <div class="row text-center" id= "actions-row">
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <form id="rating-form">
+                    <div class="form-group">
+                        <select name="rating" id="rating-input" class="form-control">
+                            <option value="1">1 - Very bad</option>
+                            <option value="2">2 - Bad</option>
+                            <option value="3">3 - It's Ok</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                        <button type="submit" class="btn btn-success"> Rate photo</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <p>
+                    <br>
+                    <button id="button-edit" class="btn btn-warning">Edit photo</button>
+                </p>
+            </div>
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <p> 
+                    <br>   
+                    <button id="button-delete" class="btn btn-danger">Delete photo</button>
+                </p> 
+            </div>
+        </div>
+            <div class ="row text-center" id="categories-row">
+                <div class="col-md-4 col-xs-4 col-sm-4">
+                    <form id="create-category-form">
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="create-category-input" name="category" placeholder="category name">
+                            <button type="submit" class="btn btn-secondary"> Create Category</button>
+                        </div>
+                    </form> 
+                </div>
+                
+                <div class="col-md-4 col-xs-4 col-sm-4" id="add-category"></div>
+
+                <div class="col-md-4 col-xs-4 col-sm-4" id="delete-category"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container comments-container" id= "comments-container">
+        <div class="row text-center">
+            <div class="col-md">
+                <form id="add-comment">
+                    <div class="form-group">
+                        <label for="input-description"><h4>Writte your comment:</h4></label>
+                        <textarea class="form-control center" name="commentary" placeholder="Write your comment(max: 256 chars)" rows="4"></textarea>
+                        <button type="submit" class="btn btn-success"> Send comment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <hr>
+        
+        <div class="row text-center">
+            <div class="col-md">
+            <h4> The Community say:</h4>
+            </div>
+        </div>
+            
+
+            <div class="row text-center">
+                <div class="col-md-2 col-xs-2 col-sm-2">
+                   <p> </p> 
+                </div>
+                <div class="col-md col-xs col-sm">
+                    <div id="commentary-block"></div>
+                </div>
+                <div class="col-md-2 col-xs-2 col-sm-2">
+                    <p> </p> 
+                </div>
+            </div>
+        <p> <br><br></p>   
+        <hr>
+
+    </div>
+    
+
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<!--
+    https://validator.w3.org
+-->
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="/js/utils/include.js"></script>
+
+    <script src="docs/js/register.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
+    <script src= "js/header.js" type= "module"></script>
+
+    <title>SignUp</title>
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+
+    <div class="container">
+        <div id="errors"></div>
+        <div class="row text-center">
+            <div class="col-md">
+                <h2>Sign up</h2>
+                <br>
+                <h4>You are about to join our community, enjoy</h4>
+                <br>
+                <hr>
+            </div>
+        </div>
+        <div class="row text-center">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+        <form id="register-form">
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="firstname-input">First name:</label>
+                        <input required type="text" class="form-control" id="firstname-input" required name="firstName" placeholder="First name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="lastname-input">Last name:</label>
+                        <input required type="text" class="form-control" id="lastname-input" required name="lastName" placeholder="Last name">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="username-input">Username:</label>
+                        <input required type="text" class="form-control" id="username-input" required name="username" placeholder="Choose your username">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="password-input">Password:</label>
+                        <input required type="password" class="form-control" id="password-input" required name="password" placeholder="Choose your password">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="password2-input">Confirm password:</label>
+                        <input required type="password" class="form-control" id="password2-input" required name="password2" placeholder="Repeat the password">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="email-input">Email:</label>
+                        <input required type="email" class="form-control" id="email-input" required name="email" placeholder="Insert your email">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="telephone-input">Telephone:</label>
+                        <input required type="tel" class="form-control" id="telephone-input" required name="telephone" pattern="[6789][0-9]{8}" placeholder="Insert your phone number">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="avatarUrl-input">Avatar URL (optional):</label>
+                        <input type="url" class="form-control" id="avatarUrl-input" name="avatarUrl" placeholder="Avatar url (optional)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Sign up in Photo-Gallery</button>
+                    </div>
+                    <p>By signing up you agree to our terms and conditions</p>
+                </div>
+            </div>
+
+        </form>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+
+
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>

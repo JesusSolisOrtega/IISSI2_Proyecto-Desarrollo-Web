@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!--
+    https://validator.w3.org
+-->
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="/js/utils/include.js"></script>
+
+    <script src="docs/js/user_profile.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
+    <script src= "js/header.js" type= "module"></script>
+
+    <link rel="icon" href="images/favicon.ico">
+    <title>User Profile</title>
+
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+    <div id="errors"></div>
+
+    <!--Comienzo-->
+
+    <div class="container" id="user-container">
+        <div class="row text-center">
+            <div class="col-md">
+                <div class="col-md" id="user-details">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Comienzo del bloque de Galeria (container)-->
+
+    <div class="container" id="user-gallery">
+
+        <div class="row text-center">
+            <div class="col text-center">
+                <h3>Fotos del usuario</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>

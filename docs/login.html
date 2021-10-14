@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<!--
+    https://validator.w3.org
+-->
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="/js/utils/include.js"></script>
+
+    <script src="docs/js/login.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
+    <script src= "js/header.js" type= "module"></script>
+
+    <title>Login</title>
+    <link rel="icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+
+    <div class="container">
+        <div id="errors"></div>
+        <div class="row text-center">
+            <div class="col-md">
+                <h2>Welcome to your Photo-Gallery</h2>
+                <br>
+                <h5>Let's get some fun together</h5>
+                <br>
+                <hr>
+            </div>
+        </div>
+        <div class="row text-center">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+        
+        <form id="login-form">
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="username-input">Username:</label>
+                        <input required type="text" class="form-control" id="username-input" name="username" placeholder="Username">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="password-input">Password:</label>
+                        <input required type="password" class="form-control" id="password-input" name="password" placeholder="Insert your password">
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Let me in</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+        <div class="col-md-1">
+        </div>
+        </div>
+    </div>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>
