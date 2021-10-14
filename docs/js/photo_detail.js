@@ -95,21 +95,23 @@ function handleSubmitComment(event) {
     let formData = new FormData(form);
     let userId = sessionManager.getLoggedId();
 
-    let errors = textValidator.validateCommentary(formData);
+    textValidator.validateCommentary(formData)
+        .then(errors => {if (errors.length === 0) {
+            commentsAPI.create(photoId, userId, formData)
+                .then(data => window.location.href = "photo_detail.html?photoId=" + photoId)
+                .catch(error => messageRenderer.showErrorMessage(error));
+    
+        } else {
+            let errorsDiv = document.getElementById("errors");
+            errorsDiv.innerHTML = "";
+    
+            for (let error of errors) {
+                messageRenderer.showErrorMessage(error);
+            }
+        }});
 
-    if (errors.length === 0) {
-        commentsAPI.create(photoId, userId, formData)
-            .then(data => window.location.href = "photo_detail.html?photoId=" + photoId)
-            .catch(error => messageRenderer.showErrorMessage(error));
 
-    } else {
-        let errorsDiv = document.getElementById("errors");
-        errorsDiv.innerHTML = "";
-
-        for (let error of errors) {
-            messageRenderer.showErrorMessage(error);
-        }
-    }
+    
 }
 
 
